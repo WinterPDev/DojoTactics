@@ -1,0 +1,48 @@
+@model User
+
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card border border-info">
+			<div class="card-header bg-info text-light border">
+				<h3>Register</h3>
+			</div>
+			<div class="card-body">
+				<form action="Register" method="post">
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user-ninja"></i></span>
+						</div>
+						<input asp-for="Username" class="form-control" placeholder="username">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+						</div>
+						<input asp-for="Email" class="form-control" placeholder="email">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input asp-for="Password" class="form-control" placeholder="password">
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+						</div>
+						<input asp-for="Confirm" class="form-control" placeholder="confirm password">
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Register" class="btn btn-primary float-right">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer text-center">
+                <span asp-validation-for="Username" class="text-danger row"></span>
+                <span asp-validation-for="Email" class="text-danger row"></span>
+                <span asp-validation-for="Password" class="text-danger row"></span>
+                <span asp-validation-for="Confirm" class="text-danger row"></span>
+			</div>
+		</div>
+	</div>
+</div>
